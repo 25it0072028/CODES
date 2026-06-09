@@ -4,8 +4,8 @@ int main() {
     char str[1000001];
     scanf("%s", str);
 
-    int lower_flag = 0; // bits 0-25 for a-z
-    int upper_flag = 0; // bits 0-25 for A-Z
+    int lower_flag = 0; 
+    int upper_flag = 0; 
 
     for (int i = 0; str[i]; i++) {
         char ch = str[i];
@@ -17,7 +17,7 @@ int main() {
         }
     }
 
-    int all_letters = (1 << 26) - 1; // 26 bits all set
+    int all_letters = (1 << 26) - 1; 
 
     if (lower_flag == all_letters && upper_flag == all_letters) {
         printf("Yes");
